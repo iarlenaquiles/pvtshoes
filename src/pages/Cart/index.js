@@ -1,7 +1,63 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import {
+  MdRemoveCircleOutline,
+  MdAddCircleOutline,
+  MdDelete,
+} from 'react-icons/md';
+import { Container, Total, ProductTable } from './styles';
 
 export default function Cart() {
-  return <h1>dfsdf</h1>;
+  return (
+    <Container>
+      <ProductTable>
+        <thead>
+          <th />
+          <th>Produto</th>
+          <th>QTD</th>
+          <th>Subtotal</th>
+          <th />
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://static.netshoes.com.br/produtos/tenis-de-caminhada-leve-confortavel/06/E74-0492-006/E74-0492-006_detalhe2.jpg?ims=326x"
+                alt="Tenis"
+              />
+            </td>
+            <td>
+              <strong>Tenis show</strong>
+              <span>R$129</span>
+            </td>
+
+            <td>
+              <div>
+                <button type="button">
+                  <MdRemoveCircleOutline size={20} color="#7159c1" />
+                </button>
+                <input type="number" readOnly value={1} />
+                <button type="button">
+                  <MdAddCircleOutline size={20} color="#7159c1" />
+                </button>
+              </div>
+            </td>
+            <td>
+              <strong>R$250</strong>
+            </td>
+            <td>
+              <MdDelete size={20} color="#7159c1" />
+            </td>
+          </tr>
+        </tbody>
+      </ProductTable>
+
+      <footer>
+        <button type="button">Finalizar pedido</button>
+        <Total>
+          <span>Total</span>
+          <strong>R$1930</strong>
+        </Total>
+      </footer>
+    </Container>
+  );
 }
