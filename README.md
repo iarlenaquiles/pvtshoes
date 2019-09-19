@@ -9,6 +9,7 @@
  - React
  - Redux
  - Redux Saga
+ - React Hooks
  - JSON Server
  - Axios
  - Styled Components
