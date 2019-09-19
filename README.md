@@ -14,6 +14,8 @@
  - Styled Components
  - Reactotron Redux/Saga
  - React Router Dom
+ - Polished
+ - Immer
 
 ## Run
 
